@@ -19,6 +19,9 @@
 .lg-outer.fb-comments .lg-actions .lg-next {
   right: 420px; }
 .lg-outer.fb-comments .lg-item {
+  background-image: none; }
+  .lg-outer.fb-comments .lg-item.lg-complete .lg-img-wrap {
+    background-image: none; }
 .lg-outer.fb-comments .lg-img-wrap {
   background: url(../img/loading.gif) no-repeat scroll center center transparent; }
 .lg-outer.fb-comments .lg-sub-html {
