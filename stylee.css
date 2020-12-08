@@ -1,0 +1,292 @@
+body{
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: black;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1550px;
+    margin: 0 auto;
+}
+
+/* Intro */
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: centers;
+    width: 100%;
+    height: 100vh;
+    background: url("ll.png") center
+        no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.intro__title{
+    color: white;
+    font-size:97px;
+    font-weight: 700;
+    text-transform:uppercase;
+    text-align: left;
+    margin-left: -64px;
+    line-height: 1;
+}
+
+.intro__title: after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 20 auto 0;
+    background-color: orange;
+}
+
+.intro__subtitle {
+    margin-bottom: 12px;
+    font-size: 38px;
+    color:mediumblue;
+    font-family: "Ubuntu";
+    text-align: left;
+    margin-left: -64;
+}
+
+.intro__inner{
+    width: 700;
+    max-width: 880px;
+    margin-top: 350;
+    margin-left: 10px;
+}
+
+
+
+/* Header */
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color:royalblue;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo{
+    font-size: 28px;
+    font-weight: 700;
+    color:white;
+}
+
+/* Nav */
+.nav{
+    font-family: "Ubuntu";
+    font-size: 20px;
+    text-transform: uppercase;
+               
+}
+
+.nav__link {
+    color:white;
+    font-weight: 500;
+    text-decoration: none;
+    vertical-align: top;
+    position: relative;
+    margin: 0 15px;
+    transition: color 0.2s linear;
+}
+
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100;
+    height: 3px;
+    background-color: mediumturquoise;
+    position: absolute;
+    opacity: 0;
+    top: 100%;
+    left: 0;
+    z-index: 1; 
+    transition: opasity 0.2s linear;
+}
+
+
+.nav__link:hover {
+    color: darkseagreen;
+    }
+
+.nav__link:hover: after,
+.nav__link.active: after {
+    opacity: 1;
+    
+}
+
+.nav__link.active{
+    color:pink;
+}
+
+/* Section */
+.section{
+    padding: 60px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.section__header{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 20px;
+    text-align: center;
+    
+}
+
+.section__subtitle{
+    font-size: 46px;
+    color: blue;
+    font-family: "Ubuntu";
+    font-weight: 700;
+}
+
+.section__subtitle:after {
+    content: "";
+    display:block;
+    width: 80px;
+    height: 4px;
+    background-color: skyblue;
+    margin: 30 auto;
+}
+
+
+.section__text{
+    font-size: 18px;
+    color: black;
+}
+
+
+.section__title{
+    font-size: 24px;
+    color: orange;
+    font-family: "Ubuntu";
+    font-weight: 500;
+}
+
+
+.text{
+    font-size:37px;
+    color: teal;
+    font-family: "Ubuntu";
+    font-weight: 400;
+     margin: 30 auto 20px;
+}
+
+
+
+.gallery {
+    margin: 0;
+    display: grid;
+    padding-left: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0px;
+}
+
+.img {
+    max-width: 100%;
+    
+}
+
+.item-1{}
+.item-2{}
+
+.gallery-item:{
+ 
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 1/4;
+}
+
+.photo{
+    margin: 80 0 0;
+    margin-left: 0;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  width: 600px;
+  height: 80px;
+  left: -30px;
+  text-align: center;
+  line-height: 80px;
+  color: #fff;
+  font-size: 44px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family:"Ubuntu";
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 40px;
+  z-index: 1;
+}
+ 
+.btn:hover {
+  animation: animate 8s linear infinite;
+}
+ 
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+ 
+.btn:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 40px;
+  opacity: 0;
+  transition: .5s;
+}
+ 
+.btn:hover:before {
+  filter: blur(30px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}
+
+
+
+
+
+
+
+
+
+
