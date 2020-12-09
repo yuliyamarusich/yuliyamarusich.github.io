@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: centers;
     width: 100%;
     height: 100vh;
-    background: url("/images/backgroun1.png") center
+    background: url("ll.png") center
         no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     text-transform:uppercase;
     text-align: left;
-    margin-left: 64px;
+    margin-left: -64px;
     line-height: 1;
 }
 
@@ -56,11 +56,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .intro__subtitle {
+    margin-bottom: 12px;
     font-size: 38px;
     color:mediumblue;
     font-family: "Ubuntu";
     text-align: left;
-    margin-left: 64;
+    margin-left: -96;
 }
 
 .intro__inner{
@@ -226,7 +227,59 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 0;
 }
 
-
+.btn {
+  position: relative;
+  display: inline-block;
+  width: 600px;
+  height: 80px;
+  left: -60px;
+  text-align: center;
+  line-height: 80px;
+  color: #fff;
+  font-size: 44px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family:"Ubuntu";
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 40px;
+  z-index: 1;
+}
+ 
+.btn:hover {
+  animation: animate 8s linear infinite;
+}
+ 
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+ 
+.btn:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 40px;
+  opacity: 0;
+  transition: .5s;
+}
+ 
+.btn:hover:before {
+  filter: blur(30px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}
 
 
 
